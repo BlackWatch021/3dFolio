@@ -13,21 +13,29 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
+  website_link,
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <motion.div
+      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+      onClick={() =>
+        website_link === ""
+          ? alert(
+              "Due to restrictions, this website is not available in public domain."
+            )
+          : window.open(website_link, "_blank")
+      }
+      style={{ cursor: "pointer" }}
+    >
       <Tilt
         options={{
-          max: 45,
+          max: 20,
           scale: 1,
-          speed: 450,
+          speed: 150,
         }}
         className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
       >
-        <div
-          className="relative w-full h-[230px]"
-          style={{ cursor: "pointer" }}
-        >
+        <div className="relative w-full h-[230px]">
           <img
             src={image}
             alt={name}
@@ -35,7 +43,13 @@ const ProjectCard = ({
           />
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
             <div
-              onClick={() => window.open(source_code_link, "_blank")}
+              onClick={() =>
+                source_code_link === ""
+                  ? alert(
+                      "Due to restrictions, the github repository is not available in public domain."
+                    )
+                  : window.open(source_code_link, "_blank")
+              }
               className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
             >
               <img
@@ -75,11 +89,13 @@ const Works = () => {
             variants={fadeIn("", "", 0.1, 1)}
             className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
           >
-            Following projects showcases my skills and experience through
-            real-world examples of my work. Each project is briefly described
-            with links to code repositories and line emos in it. It reflects my
-            ability to solve comples problems, work with different technologies,
-            and manage projects effectively.
+            Some of projects on which I have worked on, Each projects comes with
+            links to source code and live demos. I'm not afraid to tackle
+            challenges, and I'm committed to refining my abilities in all
+            aspects. Right now I am working on a real world application to solve
+            a particular problem. I'm excited to collaborate on projects and
+            contribute my skills to create impactful solutions. Let's bring
+            ideas to life
           </motion.p>
         </div>
         <div className="mt-20 flex flex-wrap gap-7">

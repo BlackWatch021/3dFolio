@@ -38,10 +38,21 @@ const About = () => {
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
         I'm a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React, Node and Three.js.
-        I'm a quick learner and collaborate closely with clients to create
-        efficient, scalable, and user-friendly solutions that solve real-world
-        problems. Let's work together to bring your ideas to life!
+        JavaScript. My expertise includes working with frameworks and tools such
+        as React, Node.js, Express.js, and MongoDB. I am a proud member of the
+        "VI QR Coders" team, and together we achieved victory in the Smart India
+        Hackathon 2022 edition. I have a strong learning mindset and I am
+        currently focusing on expanding my knowledge in NEXT.js and honing my
+        UI/UX design skills. While I may not know everything, I excel in
+        researching and finding effective solutions. I am eager to collaborate
+        and transform your ideas into reality. Let's join forces to bring your
+        visions to life!
+        {/* I'm a skilled software developer with experience in TypeScript and
+        JavaScript, and expertise in frameworks/tools like React, NodeJS, ExpressJS and MongoDB.
+        I am a part of team "VI QR Coders", working together we have won the Smart India Hackathon 2023 edition.
+       I am a quick learner, and currently I am learning more and more about NEXT JS and UI/UX designing.
+       I might don't konw everything, but I know how to do research and get the solution.
+        Let's work together to bring your ideas to life! */}
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">

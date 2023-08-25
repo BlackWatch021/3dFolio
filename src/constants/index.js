@@ -24,6 +24,11 @@ import {
   jobit,
   tripguide,
   threejs,
+  amazon,
+  blogSite,
+  blogSummarizer,
+  disney,
+  NDEAR,
 } from "../assets";
 
 export const navLinks = [
@@ -47,7 +52,7 @@ const services = [
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Front End Developer",
     icon: mobile,
   },
   {
@@ -55,7 +60,7 @@ const services = [
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "UI/UX",
     icon: creator,
   },
 ];
@@ -161,9 +166,8 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
-    description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+    name: "NDEAR Portal",
+    description: `Created this winning solution with my team "VI QR Coders" during the Smart India Hackathon 2022, problem statement was given by Ministry of Education, India to help teachers/faculty of schools. Due to certain restrictions, source code and website link is not availalbe in public domain`,
     tags: [
       {
         name: "react",
@@ -174,54 +178,145 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "express",
         color: "pink-text-gradient",
       },
+      {
+        name: "node",
+        color: "yellow-text-gradient",
+      },
+      {
+        name: "OCR (for image recognition)",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "React native",
+        color: "cyan-text-gradient",
+      },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: NDEAR,
+    source_code_link: "",
+    website_link: "",
   },
   {
-    name: "Job IT",
+    name: "QuickReads",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "It's an AI based application, which can summarize long articles/blogs/texts in a very short period of time. You just have to place the link of the article/blog in the provided field and you will get the summary. To do so, I have utilized one of the API provided by GPT-4. ",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
+        name: "Styled Component",
+        color: "orange-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: blogSummarizer,
+    source_code_link:
+      "https://github.com/BlackWatch021/Blog-summarizer-OpenAI-",
+    website_link: "https://blogsummarizer.netlify.app/",
   },
   {
-    name: "Trip Guide",
+    name: "Blog Site",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Made this app so that I can organize all of my blogs in a single place. It has the feature of comments, so that readers can give their insights about the blogs but to do so they have to first login. Currently the project is underway as I will be putting my blogs in some time. TILL THEN DUMMY DATA HAS BEEN USED",
     tags: [
       {
-        name: "nextjs",
+        name: "nextJs",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "styled Component",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "Google Auth(firebase)",
+        color: "cyan-text-gradient",
+      },
+    ],
+    image: blogSite,
+    source_code_link: "https://github.com/BlackWatch021/Blog-site-nextJS",
+    website_link: "https://personalblognextjs.vercel.app/",
+  },
+  {
+    name: "Disney Clone",
+    description:
+      "Cloned the Disney+ streaming application. Included the User Authentication feature using Google Firebase. I have made the app fully responsive for all of the major devices.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mongodb",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "Styled Component",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "Redux",
         color: "pink-text-gradient",
       },
+      {
+        name: "Google Auth(firebase)",
+        color: "cyan-text-gradient",
+      },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: disney,
+    source_code_link: "https://github.com/BlackWatch021/Disney-clone",
+    website_link: "https://himanshu-disneyplus-clone.netlify.app/",
+  },
+
+  {
+    name: "Tesla Clone",
+    description:
+      "Cloned the TESLA electric's website. The whole application is fully responsive, so that user may get better experience across all devices.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Styled Component",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: tesla,
+    source_code_link: "https://github.com/BlackWatch021/tesla-clone",
+    website_link: "https://himanshu-tesla-clone.netlify.app/",
+  },
+  {
+    name: "Amazon Clone",
+    description:
+      "It's amazon's clone with included features like user authentication, product selection and production summary page. Redux is used here to improve state management for the application",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Styled Component",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "Redux",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Google Auth(firebase)",
+        color: "cyan-text-gradient",
+      },
+    ],
+    image: amazon,
+    source_code_link: "https://github.com/BlackWatch021/amazon-clone",
+    website_link: "https://himanshu-amazon-clone.netlify.app/",
   },
 ];
 
