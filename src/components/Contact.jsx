@@ -13,7 +13,9 @@ const Contact = () => {
     email: "",
     message: "",
   });
-
+  const service = import.meta.env.VITE_SERVICE_KEY;
+  const template = import.meta.env.VITE_TEMPLATE_KEY;
+  const public_key = import.meta.env.VITE_PUBLIC_KEY;
   const [loading, setLoading] = useState(false);
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -25,8 +27,8 @@ const Contact = () => {
 
     emailjs
       .send(
-        "service_2020ods",
-        "template_rq4olvy",
+        service,
+        template,
         {
           form_name: form.name,
           to_name: "Himanshu",
@@ -34,7 +36,7 @@ const Contact = () => {
           to_email: "himanshunegiweb@gmail.com",
           message: form.message,
         },
-        "fdk-Ha4IOwYfq4SyO"
+        public_key
       )
       .then(() => {
         setLoading(false);
@@ -53,6 +55,15 @@ const Contact = () => {
             alert("Something went wrong.");
           }
         );
+      })
+      .catch((er) => {
+        setLoading(false);
+        alert("Some error occured, please re-try");
+        setForm({
+          name: "",
+          email: "",
+          message: "",
+        });
       });
   };
 
