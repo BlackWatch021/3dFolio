@@ -1,8 +1,40 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { ComputersCanvas, DuckCanvas } from "./canvas";
+import { useEffect, useRef, useState } from "react";
+import { i } from "maath/dist/index-43782085.esm";
+import { random } from "maath";
 
 const Hero = () => {
+  const nameReference = useRef("");
+  let random = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+  (() => {
+    let name = "Himanshu";
+    let iterations = 0;
+    let interval = setInterval(() => {
+      nameReference.current.innerText = nameReference.current.innerText
+        .split("")
+        .map((letter, index) => {
+          if (index < iterations) {
+            return name[index];
+          }
+          return random[Math.floor(Math.random() * 26)];
+        })
+        .join("");
+      iterations += 1 / 3;
+      if (iterations === 7) {
+        clearInterval(interval);
+        nameReference.current.innerText = name;
+      }
+    }, 30);
+  })();
+  // useEffect(() => {
+  //   randomEffect("Himanshu");
+  // }, []);
+
+  console.log("Reference", nameReference.current.innerText);
+
   return (
     <section
       style={{ marginTop: "20px" }}
@@ -17,7 +49,11 @@ const Hero = () => {
         </div>
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className="text-[#915eff]">Himanshu</span>
+            {/* Hi, I'm <span className="text-[#915eff]">Himanshu</span> */}
+            Hi, I'm{" "}
+            <span className="text-[#915eff]" ref={nameReference}>
+              Himanshu
+            </span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             I am a fullstack developer, and likes designing.

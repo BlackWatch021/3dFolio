@@ -122,7 +122,7 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Front End Developer(Intern)",
+    title: "Front End Developer (Intern)",
     company_name: "Steady Apply",
     icon: steadyApply,
     iconBg: "#383E56",

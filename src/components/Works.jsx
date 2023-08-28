@@ -15,18 +15,15 @@ const ProjectCard = ({
   source_code_link,
   website_link,
 }) => {
-  {
-    console.log(`project "${name}" is rendered`);
-  }
   return (
     //Due to some issue in motion.div(animation), it has been removed and static display of project is used, previous code is moved to "Works-deprecated".
     <div
       onClick={() =>
-        projects[5].website_link === ""
+        website_link === ""
           ? alert(
               "Due to restrictions, this website is not available in public domain."
             )
-          : window.open(projects[5].website_link, "_blank")
+          : window.open(website_link, "_blank")
       }
       style={{ cursor: "pointer" }}
     >
@@ -37,7 +34,6 @@ const ProjectCard = ({
           speed: 150,
         }}
         className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
-        // className="bg-tertiary p-5 rounded-2xl  w-full"
       >
         <div className="relative w-full h-[230px]">
           <img
@@ -91,13 +87,12 @@ const Works = () => {
 
         <div className="w-full flex">
           <p className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]">
-            Some of projects on which I have worked on, Each projects comes with
-            links to source code and live demos. I'm not afraid to tackle
-            challenges, and I'm committed to refining my abilities in all
+            Each of the project that I have worked on comes with links to source
+            code and live demos, and are mentioned below. I'm not afraid to
+            tackle challenges, and I'm committed to refining my abilities in all
             aspects. Right now I am working on a real world application to solve
             a particular problem. I'm excited to collaborate on projects and
-            contribute my skills to create impactful solutions. Let's bring
-            ideas to life
+            contribute my skills to create impactful solutions.
           </p>
         </div>
         <div className="mt-20 flex flex-wrap gap-7">
