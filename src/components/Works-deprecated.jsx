@@ -19,14 +19,14 @@ const ProjectCard = ({
     console.log(`project "${name}" is rendered`);
   }
   return (
-    //Due to some issue in motion.div(animation), it has been removed and static display of project is used, previous code is moved to "Works-deprecated".
-    <div
+    <motion.div
+      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
       onClick={() =>
-        projects[5].website_link === ""
+        website_link === ""
           ? alert(
               "Due to restrictions, this website is not available in public domain."
             )
-          : window.open(projects[5].website_link, "_blank")
+          : window.open(website_link, "_blank")
       }
       style={{ cursor: "pointer" }}
     >
@@ -37,7 +37,6 @@ const ProjectCard = ({
           speed: 150,
         }}
         className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
-        // className="bg-tertiary p-5 rounded-2xl  w-full"
       >
         <div className="relative w-full h-[230px]">
           <img
@@ -76,7 +75,7 @@ const ProjectCard = ({
           ))}
         </div>
       </Tilt>
-    </div>
+    </motion.div>
   );
 };
 
@@ -84,13 +83,15 @@ const Works = () => {
   return (
     <>
       <>
-        <div>
+        <motion.div variants={textVariant()}>
           <p className={styles.sectionSubText}>My work</p>
           <h2 className={styles.sectionHeadText}>Projects</h2>
-        </div>
-
+        </motion.div>
         <div className="w-full flex">
-          <p className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]">
+          <motion.p
+            variants={fadeIn("", "", 0.1, 1)}
+            className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
+          >
             Some of projects on which I have worked on, Each projects comes with
             links to source code and live demos. I'm not afraid to tackle
             challenges, and I'm committed to refining my abilities in all
@@ -98,7 +99,7 @@ const Works = () => {
             a particular problem. I'm excited to collaborate on projects and
             contribute my skills to create impactful solutions. Let's bring
             ideas to life
-          </p>
+          </motion.p>
         </div>
         <div className="mt-20 flex flex-wrap gap-7">
           {projects.map((project, index) => (
