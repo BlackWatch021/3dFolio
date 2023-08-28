@@ -44,6 +44,10 @@ export const navLinks = [
     id: "contact",
     title: "Contact",
   },
+  // {
+  //   id: "./resume/Himanshu_resume.pdf",
+  //   title: "Resume",
+  // },
 ];
 
 const services = [
