@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
-
+import SocialLinks from "./SocialLinks";
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
@@ -22,12 +22,8 @@ const Navbar = () => {
           }}
         >
           <img src={logo} alt="logo" className="w-20 h-20 object-contain" />
-          {/* <p className="text-white text-[18px] font-bold cursor-pointer">
-            Himanshu Negi
-            <span className="sm:block hidden">Negi</span>
-          </p> */}
         </Link>
-        <ul className="list-none hidden sm:flex flex-row gap-10">
+        <ul className="list-none hidden sm:flex flex-row gap-8 ">
           {navLinks.map((link) => {
             return (
               <li
@@ -46,7 +42,18 @@ const Navbar = () => {
               Resume
             </a>
           </li>
+          <div
+            style={{
+              display: "flex",
+              gap: "18px",
+              alignItems: "center",
+            }}
+            className=""
+          >
+            <SocialLinks />
+          </div>
         </ul>
+
         <div className="sm:hidden flex flex-1 justify-end items-center">
           <img
             src={toggle ? close : menu}
@@ -78,6 +85,7 @@ const Navbar = () => {
                   Resume
                 </a>
               </li>
+              <SocialLinks />
             </ul>
           </div>
         </div>

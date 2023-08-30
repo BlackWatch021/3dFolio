@@ -30,6 +30,11 @@ import disney from "./projects/disney.png";
 import tesla from "./projects/tesla.png";
 import NDEAR from "./projects/NDEAR.png";
 
+import link_github from "./contact links/github.svg";
+import link_dribble from "./contact links/dribble.svg";
+import link_linkedin from "./contact links/linkedin.svg";
+import link_twitter from "./contact links/twitter.svg";
+
 export {
   logo,
   backend,
@@ -59,4 +64,8 @@ export {
   disney,
   tesla,
   NDEAR,
+  link_github,
+  link_dribble,
+  link_linkedin,
+  link_twitter,
 };
