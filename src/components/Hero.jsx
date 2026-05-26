@@ -52,14 +52,14 @@ const Hero = () => {
             </span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I am a fullstack developer, and likes designing.
+            I make pixels dance and buttons behave.
             <br className="sm:block hidden" />
-            Currently I am learning UI/UX.
+            If it looks good, that's me-if it breaks, that's the backend.
           </p>
         </div>
       </div>
-      {/* <ComputersCanvas /> */}
-      <DuckCanvas />
+      <ComputersCanvas />
+      {/* <DuckCanvas /> */}
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">
           <div className="w-[30px] h-[50px] rounded-3xl border-2 border-secondary flex justify-center items-start p-2">

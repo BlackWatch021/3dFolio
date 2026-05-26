@@ -22,6 +22,8 @@ import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
 import steadyApply from "./company/steadyApply.png";
+import comityhub from "./company/comityhub.png";
+import keenagile from "./company/keenagile.jpg";
 
 import amazon from "./projects/amazon.png";
 import blogSite from "./projects/blogSite.png";
@@ -29,6 +31,8 @@ import blogSummarizer from "./projects/blogSummarizer.png";
 import disney from "./projects/disney.png";
 import tesla from "./projects/tesla.png";
 import NDEAR from "./projects/NDEAR.png";
+import WHISPER from "./projects/WhisperChatApp.png";
+import LMS from "./projects/lmsNextJs.png";
 
 import link_github from "./contact links/github.svg";
 import link_dribble from "./contact links/dribble.svg";
@@ -58,12 +62,16 @@ export {
   typescript,
   threejs,
   steadyApply,
+  comityhub,
+  keenagile,
   amazon,
   blogSite,
   blogSummarizer,
   disney,
   tesla,
   NDEAR,
+  WHISPER,
+  LMS,
   link_github,
   link_dribble,
   link_linkedin,

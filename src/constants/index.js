@@ -15,11 +15,15 @@ import {
   figma,
   tesla,
   steadyApply,
+  comityhub,
+  keenagile,
   amazon,
   blogSite,
   blogSummarizer,
   disney,
   NDEAR,
+  WHISPER,
+  LMS,
 } from "../assets";
 
 export const navLinks = [
@@ -117,17 +121,28 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Front End Developer (Intern)",
-    company_name: "Steady Apply",
-    icon: steadyApply,
+    title: "Full Stack Developer",
+    company_name: "Comity Hub",
+    icon: comityhub,
     iconBg: "#383E56",
-    date: "15 December 2022 - 31 March 2023",
+    date: "July 2025 – February 2026",
     points: [
-      "Responsible for creating UI/UX designs of the project.",
-      "Developing and maintaining web application using React.js and other tools.",
-      "Collaborating with other developer to create high-quality product.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Provided constructive feedback to help shape a better project.",
+      "Rebuilt an auction platform for refurbished electronics, migrating from a legacy Java/Laravel stack to Next.js + Express.js + PostgreSQL; implemented real-time bidding, bulk listing management, and an integration-ready architecture for Salesforce.",
+      "Architected and deployed a full-stack Learning Management System using Next.js, Strapi CMS, and PostgreSQL on AWS to deliver Salesforce tutorial content, streamlining vendor onboardingand reducing user support load.",
+      "Independently owned the complete SDLC across both platforms — UI/UX design, frontend development, RESTful API design, PostgreSQL schema design, and production deployment — whilepartnering with the legacy development team to validate business logic.",
+      "Configured a dual-environment AWS setup with 2 EC2 instances, S3 for media storage, PostgreSQL RDS, and IAM role-based access control; tuned deployment configuration and used Elastic IPaddressing to keep infrastructure lean and cost-efficient.",
+    ],
+  },
+  {
+    title: "Web Developer Intern",
+    company_name: "Keenagile",
+    icon: keenagile,
+    iconBg: "#383E56",
+    date: "December 2024 –Jun 2025",
+    points: [
+      "Built multiple campaign-specific landing pages for healthcare marketing clients using HTML, CSS, JavaScript, React, Bootstrap, and Tailwind CSS, creating targeted conversion paths from social media ads to specialized content addressing patient-specific concerns.",
+      "Developed responsive, mobile-optimized interfaces for Instagram and Facebook ad campaigns supporting healthcare providers, clinics, and wellness businesses across India in a fast-paced startup environment.",
+      "Collaborated with senior developers on design updates and client modifications using Git/GitHub for version control, ensuring code quality and rapid deployment of marketing assets.",
     ],
   },
 ];
@@ -160,6 +175,77 @@ const testimonials = [
 ];
 
 const projects = [
+  {
+    name: "Whisper",
+    description: `A real-time one-to-one chat application with persistent conversations, online 
+  presence, typing indicators, and per-chat unread notifications. Built with an optimistic UI for 
+  near-zero perceived latency and integrated with Terminal47 to offer users a choice between 
+  authenticated persistent messaging and ephemeral end-to-end encrypted private rooms.`,
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "express",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "node",
+        color: "yellow-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "socket.io",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "clerk-auth",
+        color: "cyan-text-gradient",
+      },
+    ],
+    image: WHISPER,
+    source_code_link:
+      "https://github.com/BlackWatch021/FullStack-react-native-chat-app",
+    website_link: "https://chat-app-web-c6zn.onrender.com/",
+  },
+  {
+    name: "LearnHub — Full-Stack LMS",
+    description: `A full-stack Learning Management System where instructors publish paid video courses and students enroll, pay, and track
+   their progress through each chapter. Built with Next.js, Clerk auth, Stripe Checkout, and a Express + DynamoDB backend.`,
+    tags: [
+      {
+        name: "next.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "typescript",
+        color: "cyan-text-gradient",
+      },
+      {
+        name: "clerk-auth",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "stripe",
+        color: "yellow-text-gradient",
+      },
+      {
+        name: "express",
+        color: "green-text-gradient",
+      },
+      {
+        name: "aws-dynamodb",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: LMS,
+    source_code_link: "https://github.com/BlackWatch021/Nextjs-LMS-Client",
+    website_link: "https://nextjs-lms-client.vercel.app/search",
+  },
   {
     name: "NDEAR Portal",
     description: `Created this winning solution with my team "VI QR Coders" during the Smart India Hackathon 2022, problem statement was given by Ministry of Education, India to help teachers/faculty of schools. Due to certain restrictions, source code and website link is not availalbe in public domain`,
